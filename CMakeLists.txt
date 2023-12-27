@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.5)
+project(homework VERSION 0.1 LANGUAGES C)
+configure_file(homework.h.in homework.h)
+add_executable(homework main.c sensorDataParser.c aggregator.c avg.c stat.c args.c)
+target_include_directories(homework PUBLIC ${PROJECT_BINARY_DIR})
